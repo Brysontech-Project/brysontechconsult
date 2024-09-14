@@ -16,8 +16,16 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { Stack } from "@mui/material";
 import Image from "next/image";
+import Link from "next/link";
 
-const pages = ["Products", "Pricing", "Blog"];
+const pages = [
+  "Startups",
+  "Bussinesses",
+  "How we work",
+  "works",
+  "blogs",
+  "Learn More",
+];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
@@ -85,7 +93,7 @@ function ResponsiveAppBar() {
       <AppBar
         position="static"
         sx={{
-          background: "white",
+          background: "rgba(255, 255, 255, 0.8)",
           boxShadow: "none",
           borderBottom: "0.2px solid #e4e6e7",
         }}
@@ -154,17 +162,30 @@ function ResponsiveAppBar() {
             >
               LOGO
             </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            <Stack
+              direction="row"
+              justifyContent="space-around"
+              sx={{
+                flexGrow: 1,
+                display: { xs: "none", md: "flex" },
+                margin: { md: "0px 100px", sm: "0px 50px" },
+              }}
+            >
               {pages.map((page) => (
-                <Button
+                <a
                   key={page}
+                  href="#"
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
+                  style={{
+                    my: 2,
+                    color: "#003b55",
+                    display: "block",
+                  }}
                 >
                   {page}
-                </Button>
+                </a>
               ))}
-            </Box>
+            </Stack>
             <Box sx={{ flexGrow: 0, display: { md: "block", xs: "none" } }}>
               <Tooltip title="Open settings">
                 <a>Start a project</a>
