@@ -19,6 +19,13 @@
   background-color: #ff7400;
   color: white;
 }
+.nav_links {
+  color: #003b55;
+  display: block;
+}
+.nav_links:hover {
+  color: #999;
+}
 
 @media (min-width: 600px) {
   .responsive {

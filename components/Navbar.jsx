@@ -163,12 +163,15 @@ function ResponsiveAppBar() {
               LOGO
             </Typography>
             <Stack
+              spacing={2}
               direction="row"
-              justifyContent="space-around"
+              // justifyContent="space-around"
               sx={{
                 flexGrow: 1,
+                alignItems: "center",
+                justifyContent: "center",
                 display: { xs: "none", md: "flex" },
-                margin: { md: "0px 100px", sm: "0px 50px" },
+                // margin: { md: "0px 100px", sm: "0px 50px" },
               }}
             >
               {pages.map((page) => (
@@ -178,9 +181,8 @@ function ResponsiveAppBar() {
                   onClick={handleCloseNavMenu}
                   style={{
                     my: 2,
-                    color: "#003b55",
-                    display: "block",
                   }}
+                  className="nav_links"
                 >
                   {page}
                 </a>
@@ -188,7 +190,17 @@ function ResponsiveAppBar() {
             </Stack>
             <Box sx={{ flexGrow: 0, display: { md: "block", xs: "none" } }}>
               <Tooltip title="Open settings">
-                <a>Start a project</a>
+                <a
+                  style={{
+                    border: "2px solid white",
+                    padding: "8px 10px",
+                    background: "#ff7400",
+                    color: "white",
+                    borderRadius: "5px",
+                  }}
+                >
+                  Start a project
+                </a>
               </Tooltip>
             </Box>
             <Box sx={{ flexGrow: 0, display: { md: "none", xs: "block" } }}>
