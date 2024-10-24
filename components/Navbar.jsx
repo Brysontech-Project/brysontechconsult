@@ -189,19 +189,18 @@ function ResponsiveAppBar() {
               ))}
             </Stack>
             <Box sx={{ flexGrow: 0, display: { md: "block", xs: "none" } }}>
-              <Tooltip title="Open settings">
-                <a
-                  style={{
-                    border: "2px solid white",
-                    padding: "8px 10px",
-                    background: "#ff7400",
-                    color: "white",
-                    borderRadius: "5px",
-                  }}
-                >
-                  Start a project
-                </a>
-              </Tooltip>
+              <a
+                style={{
+                  border: "2px solid orange",
+                  padding: "8px 10px",
+                  background: "#ff7400",
+                  color: "white",
+                  borderRadius: "50px",
+                  cursor: "pointer",
+                }}
+              >
+                Start a project
+              </a>
             </Box>
             <Box sx={{ flexGrow: 0, display: { md: "none", xs: "block" } }}>
               <IconButton

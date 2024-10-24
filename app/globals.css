@@ -1,3 +1,15 @@
+.archivo-black-regular {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -32,4 +44,8 @@
     padding-left: 24px;
     padding-right: 24px;
   }
+}
+
+.service_container:hover {
+  margin-bottom: 5px;
 }
