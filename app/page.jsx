@@ -12,6 +12,7 @@ import "swiper/css/navigation";
 
 import { Autoplay } from "swiper/modules";
 import Image from "next/image";
+import ProcessGrid from "@/components/ProcessGrid";
 
 const page = () => {
   return (
@@ -508,7 +509,7 @@ const page = () => {
                         color: "#003b55",
                       }}
                     >
-                      Automaion{" "}
+                      Automation{" "}
                     </Typography>
                     <Typography
                       sx={{
@@ -585,16 +586,101 @@ const page = () => {
       </Box>
       {/* Our process */}
 
-      <Box sx={{ padding: { md: "20px 70px", xs: "20px 15px" } }}>
+      <Box
+        className="layout"
+        sx={{
+          // padding: {
+          //   md: "20px 70px",
+          //   xs: "20px 15px",
+          // },
+          background: "#003b55",
+          minHeight: "100vh",
+          marginTop: "50px",
+        }}
+      >
         <Typography
           sx={{
             textAlign: "center",
             fontSize: "2em",
             fontWeight: "700",
-            color: "#003b55",
+            color: "white",
           }}
         >
           Our Process
+        </Typography>
+        <Stack
+          direction={{ md: "row", xs: "column" }}
+          justifyContent="space-between"
+          sx={{ marginTop: "15px" }}
+        >
+          <Box
+            sx={{
+              width: {
+                md: "50%",
+                xs: "100%",
+                borderLeft: "3px solid orange",
+                paddingLeft: "5px",
+              },
+            }}
+          >
+            {" "}
+            <Typography
+              sx={{
+                fontSize: "3em",
+                fontWeight: "800",
+                color: "white",
+                lineHeight: { md: "1.5", xs: "1" },
+              }}
+            >
+              Helping you achieve your bussiness goals
+            </Typography>
+          </Box>
+
+          <Box
+            sx={{
+              width: { md: "50%", xs: "100%" },
+              marginTop: { md: "0", xs: "15px" },
+              display: "flex",
+              alignItems: "end",
+              justifyContent: { md: "end", xs: "start" },
+            }}
+          >
+            <Typography
+              sx={{
+                color: "white",
+                textAlign: "start",
+                width: "70%",
+              }}
+            >
+              At Brysontech, we believe in delivering exceptional solutions
+              through a clear and structured process that ensures transparency,
+              efficiency, and quality.
+            </Typography>
+          </Box>
+        </Stack>
+        <ProcessGrid />
+      </Box>
+
+      {/* About us */}
+      <Box
+        className="layout"
+        sx={{
+          // padding: {
+          //   md: "20px 70px",
+          //   xs: "20px 15px",
+          // },
+          minHeight: "100vh",
+          marginTop: "50px",
+        }}
+      >
+        <Typography
+          sx={{
+            textAlign: "center",
+            fontSize: "2em",
+            fontWeight: "700",
+          }}
+        >
+          About us{" "}
         </Typography>
       </Box>
     </>
